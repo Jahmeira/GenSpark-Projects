@@ -9,7 +9,7 @@ public class Distance {
         double km;
         double x = lt1 * d2r;
         double y = lt2 * d2r;
-        ans = Math.acos(Math.sin(x) * Math.sin(y) + Math.cos(x) * Math.cos(y) * Math.cos(d2r * (ln1 - ln2))) * d2km;
+        km = Math.acos(Math.sin(x) * Math.sin(y) + Math.cos(x) * Math.cos(y) * Math.cos(d2r * (ln1 - ln2))) * d2km;
         return km;
     }
 
