@@ -258,12 +258,10 @@ public class Locations extends TicketPrice {
         ArrayList<Double> dest = ports.get(destination);
         Distance calculator = new Distance();
         Double distance = calculator.kmeters(orig.get(0), orig.get(1), dest.get(0), dest.get(1));
-        System.out.println(distance);
 
-        Double baseprice = location(origin, destination);
-        double tiicketPrice =  50 + (distance * .5);
+        double ticketPrice =  50 + (distance * .5);
 
-        return baseprice + tiicketPrice;
+        return ticketPrice;
 
 
 
