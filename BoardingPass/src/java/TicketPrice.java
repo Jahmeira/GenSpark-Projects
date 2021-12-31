@@ -1,5 +1,9 @@
-public class TicketPrice {
-    int ticketprice = 250;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class TicketPrice{
+    //double baseTicketPrice =  50 + (distance * .5);
 
     public static double price (int price){
         return price;

@@ -1,11 +1,11 @@
-package com.company;
+//package com.company;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Locations {
-    public static void location(String origin, String destination) {
+public class Locations extends TicketPrice {
+    public static double location(String origin, String destination) {
         Map<String, ArrayList<Double>> ports = new HashMap<>();
 
         ArrayList<Double> cAK = new ArrayList<Double>(); //Kotlik Airport
@@ -253,10 +253,19 @@ public class Locations {
         cWY.add(-110.737777);
         ports.put("WY", cWY);
 
+
         ArrayList<Double> orig = ports.get(origin);
         ArrayList<Double> dest = ports.get(destination);
         Distance calculator = new Distance();
         Double distance = calculator.kmeters(orig.get(0), orig.get(1), dest.get(0), dest.get(1));
         System.out.println(distance);
+
+        Double baseprice = location(origin, destination);
+        double tiicketPrice =  50 + (distance * .5);
+
+        return baseprice + tiicketPrice;
+
+
+
     }
 }

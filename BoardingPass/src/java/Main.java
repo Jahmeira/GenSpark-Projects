@@ -21,7 +21,7 @@ public class Main extends BoardingInfo {
 
     }
     Scanner input = new Scanner(System.in);
-////dfsgdhfnkb
+
     //For storing passengers info
     File boardingInfo = new File("\"C:\\genspark_projects\\BoardingPass\\BoardingInfoFile.txt\"");
 
@@ -41,6 +41,7 @@ public class Main extends BoardingInfo {
 
     public static void main(String[] args) {
         //placeholder
+
     }
 
 

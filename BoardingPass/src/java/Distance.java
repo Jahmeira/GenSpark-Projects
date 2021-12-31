@@ -1,4 +1,4 @@
-package com.company;
+//package com.company;
 
 public class Distance {
     private static final double r2d = 180 / 3.14;
@@ -12,4 +12,8 @@ public class Distance {
         ans = Math.acos(Math.sin(x) * Math.sin(y) + Math.cos(x) * Math.cos(y) * Math.cos(d2r * (ln1 - ln2))) * d2km;
         return ans;
     }
+
+    //TODO
+    // Convert kilometers to price
+
 }
