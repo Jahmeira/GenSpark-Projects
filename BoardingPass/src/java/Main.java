@@ -28,7 +28,7 @@ public class Main extends BoardingInfo {
     //File for boarding pass template // template needed
     File boardingTemplate = new File("");
 
-    public static int bPN; //boarding pass number
+    public static String bPN; //boarding pass number
     public static String date;
     public static String origin;
     public static String destination;
@@ -37,6 +37,8 @@ public class Main extends BoardingInfo {
     public static String gender;
 
     public static void main(String[] args) {
+        Passenger passenger = new Passenger();
+        String name = passenger.getName();
         String origin = null;
         String destination = null;
         Locations locations = new Locations();
@@ -44,6 +46,6 @@ public class Main extends BoardingInfo {
         TicketPrice calculator = new TicketPrice();
         Double price = calculator.price(distance, age, gender);
         BoardingPassNumber boardingPassNumber = new BoardingPassNumber();
-        bPN = boardingPassNumber(name, date, distance);
+        bPN = boardingPassNumber.bPN(name, date, distance);
     }
 }
