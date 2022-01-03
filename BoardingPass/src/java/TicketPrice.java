@@ -11,6 +11,7 @@ public class TicketPrice {
         if (gender == "F"){
             finalprice *= .75;
         }
+        finalprice = (Math.round(finalprice * 100)) / 100;
         return finalprice;
     }
 }
