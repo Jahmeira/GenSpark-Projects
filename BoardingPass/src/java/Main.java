@@ -43,5 +43,7 @@ public class Main extends BoardingInfo {
         Double distance = locations.location(origin, destination);
         TicketPrice calculator = new TicketPrice();
         Double price = calculator.price(distance, age, gender);
+        BoardingPassNumber boardingPassNumber = new BoardingPassNumber();
+        bPN = boardingPassNumber(name, date, distance);
     }
 }
