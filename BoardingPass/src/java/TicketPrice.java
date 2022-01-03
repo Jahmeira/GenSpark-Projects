@@ -1,29 +1,16 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+package com.company;
 
-public class TicketPrice{
-    //double baseTicketPrice =  50 + (distance * .5);
-
-    public static double price (int price){
-        return price;
-    }
-
-    public static double discount(int age) {
+public class TicketPrice {
+    public static double price(Double distance, int age, String gender) {
+        double finalprice = 50 + (.5 * distance);
         if (age <= 12) {
-            return .5;
+            finalprice *= .5;
         } else if (age >= 60) {
-            return .6;
-        } else {
-            return 1.0;
+            finalprice *= .4;
         }
-    }
-
-    public double String(String gender){
-        if(gender == "F"){
-            return .25;
+        if (gender == "F"){
+            finalprice *= .75;
         }
-        else
-            return 0;
+        return finalprice;
     }
 }
