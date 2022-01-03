@@ -33,16 +33,15 @@ public class Main extends BoardingInfo {
     public static String origin;
     public static String destination;
     public static String dT; //departure time
-    String gender [] = {"M", "F"};
-
-
-
-
+    public static int age;
+    public static String gender;
 
     public static void main(String[] args) {
-        //placeholder
-
+        String origin = null;
+        String destination = null;
+        Locations locations = new Locations();
+        Double distance = locations.location(origin, destination);
+        TicketPrice calculator = new TicketPrice();
+        Double price = calculator.price(distance, age, gender);
     }
-
-
 }
