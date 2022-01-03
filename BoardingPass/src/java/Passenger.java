@@ -7,7 +7,7 @@ public class Passenger  {
     int age;
     int phoneNum = 0;
 
-    public String getName(){
+    public static String getName(){
         return this.name;
     }
     public void setName(String name){
