@@ -39,8 +39,8 @@ public class Main extends BoardingInfo {
     public static void main(String[] args) {
         Passenger passenger = new Passenger();
         String name = passenger.getName();
-        String origin = null;
-        String destination = null;
+        //String origin = null;
+        //String destination = null;
         Locations locations = new Locations();
         Double distance = locations.location(origin, destination);
         TicketPrice calculator = new TicketPrice();

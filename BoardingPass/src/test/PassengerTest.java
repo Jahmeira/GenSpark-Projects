@@ -14,52 +14,58 @@ class PassengerTest {
 
     @Test
     void getName() {
-     assertEquals("null, null ", Passenger.getName());
+     assertNull(passenger.getName());
     }
 
     @org.junit.jupiter.api.Test
     void setName() {
-    Passenger.setName();
-     assertEquals("null, null ", Passenger.getName());
+    passenger.setName("Parker, Peter");
+     assertEquals("Parker, Peter", passenger.getName());
 
     }
 
     @org.junit.jupiter.api.Test
     void getEmail() {
+        assertNull(passenger.getEmail());
     }
 
     @org.junit.jupiter.api.Test
     void setEmail() {
+        passenger.setEmail("legos@gmail.com");
+        assertEquals("legos@gmail.com", passenger.getEmail());
     }
 
     @org.junit.jupiter.api.Test
     void getAge() {
+        assertEquals(0,passenger.getAge());
     }
 
     @org.junit.jupiter.api.Test
     void setAge() {
+        passenger.setAge(24);
+        assertEquals(24, passenger.getAge());
     }
 
     @org.junit.jupiter.api.Test
     void getGender() {
-        assertEquals("M", Passenger.getGender());
+        assertNull(passenger.getGender());
     }
 
     @org.junit.jupiter.api.Test
     void setGender() {
-        Passenger.setGender("F");
-        assertEquals("F", Passenger.getGender());
+        passenger.setGender("F");
+        assertEquals("F", passenger.getGender());
     }
 
     @org.junit.jupiter.api.Test
     void getPhoneNum() {
-        assertEquals("000-000-0000", Passenger.getPhoneNum());
+        assertNull(passenger.getPhoneNum());
     }
 
     @org.junit.jupiter.api.Test
     void setPhoneNum() {
-       Passenger.setPhoneNum("000-000-0000");
-       assertEquals("000-000-0000", Passenger.getPhoneNum());
+       passenger.setPhoneNum("000-000-0000");//
+       assertEquals("000-000-0000", passenger.getPhoneNum());
     }
 
     @AfterEach

@@ -5,16 +5,16 @@ public class Passenger  {
     String gender;
     //{"M", "F"};
     int age;
-    int phoneNum = 0;
+    String phoneNum;
 
-    public static String getName(){
+    public String getName(){
         return this.name;
     }
     public void setName(String name){
         this.name = name;
     }
 
-    public String getEmail(String email){
+    public String getEmail(){
         return this.email;
     }
     public void setEmail(String email){
@@ -35,10 +35,10 @@ public class Passenger  {
         this.gender = gender;
     }
 
-    public Integer getPhoneNum(){
+    public String getPhoneNum(){
         return this.phoneNum;
     }
-    public void setPhoneNum(int phoneNum){
+    public void setPhoneNum(String phoneNum){
         this.phoneNum = phoneNum;
     }
 }
