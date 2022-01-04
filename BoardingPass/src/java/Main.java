@@ -39,10 +39,11 @@ public class Main extends BoardingInfo {
     public static void main(String[] args) {
         Passenger passenger = new Passenger();
         String name = passenger.getName();
-        //String origin = null;
-        //String destination = null;
+        String origin = null;
+        String destination = null;
         Locations locations = new Locations();
         Double distance = locations.location(origin, destination);
+        int flightduration = (int) Math.round(distance) + 10; //duration of flight in minutes
         TicketPrice calculator = new TicketPrice();
         Double price = calculator.price(distance, age, gender);
         BoardingPassNumber boardingPassNumber = new BoardingPassNumber();
