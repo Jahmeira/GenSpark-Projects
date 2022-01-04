@@ -1,11 +1,11 @@
-//package com.company;
+package com.company;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Locations extends TicketPrice {
-    public static double location(String origin, String destination) {
+public class Locations {
+    public static Double location(String origin, String destination) {
         Map<String, ArrayList<Double>> ports = new HashMap<>();
 
         ArrayList<Double> cAK = new ArrayList<Double>(); //Kotlik Airport
@@ -253,17 +253,16 @@ public class Locations extends TicketPrice {
         cWY.add(-110.737777);
         ports.put("WY", cWY);
 
-
-        ArrayList<Double> orig = ports.get(origin);
-        ArrayList<Double> dest = ports.get(destination);
-        Distance calculator = new Distance();
-        Double distance = calculator.kmeters(orig.get(0), orig.get(1), dest.get(0), dest.get(1));
-
-        double ticketPrice =  50 + (distance * .5);
-
-        return ticketPrice;
-
-
-
+        Double distance = null;
+        try {
+            ArrayList<Double> orig = ports.get(origin);
+            ArrayList<Double> dest = ports.get(destination);
+            Distance calculator = new Distance();
+            distance = calculator.kmeters(orig.get(0), orig.get(1), dest.get(0), dest.get(1));
+            return distance;
+        } catch (Exception e) {
+            System.out.println("Error with inputting origin and destination.");
+        }
+        return distance;
     }
 }
