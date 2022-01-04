@@ -1,4 +1,4 @@
-package com.company;
+//package com.company;
 
 public class TicketPrice {
     public static double price(Double distance, int age, String gender) {
