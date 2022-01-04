@@ -1,4 +1,4 @@
-package com.company;
+//package com.company;
 
 public class Distance {
     private static final double r2d = 180 / 3.14;
