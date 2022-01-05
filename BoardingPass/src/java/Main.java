@@ -1,5 +1,5 @@
+import java.io.*;
 import java.util.Scanner;
-import java.io.File;
 
 /*
 •	The user will be required to enter their Name, Email, Phone Number, Gender, Age, Date, Destination, and Departure Time into the console or GUI (teams’ preference).
@@ -15,18 +15,34 @@ import java.io.File;
 
  */
 
-public class Main extends BoardingInfo {
+public class Main {
 
-    public static void Main (String[] args){
+    public static void Main (String[] args) throws IOException {
+    BufferedWriter writer = new BufferedWriter(new FileWriter("BoardingInfoFile.txt", true));
+    BufferedReader reader = new BufferedReader(new FileReader("BoardingInfoFile"));
 
+        Scanner input = new Scanner(System.in);
+        Passenger passenger = new Passenger(); //BOARDING PASS INFO a and has passenger info
+        BoardingInfo boardingInfo = new BoardingInfo(); //BOARDING PASS bp boardingpass info
+        TicketPrice ticketPrice = new TicketPrice();
+
+
+        writer.write("✈ JSJ Airlines ✈\n");
+        boardingInfo.textFormat(input, writer, passenger, boardingInfo);
+        boardingInfo.userFillOut(input, writer, passenger);
+        ticketPrice.price(Double distance, int age, String gender);
+
+        writer.close();
+        boardingInfo.displayFile(reader);
     }
-    Scanner input = new Scanner(System.in);
 
     //For storing passengers info
-    File boardingInfo = new File("\"C:\\genspark_projects\\BoardingPass\\BoardingInfoFile.txt\"");
+  /*  File boardingInfo = new File("\"C:\\genspark_projects\\BoardingPass\\BoardingInfoFile.txt\"");
 
     //File for boarding pass template // template needed
     File boardingTemplate = new File("");
+
+    boardingInfo.write(age, name,)*/
 
     public static String bPN; //boarding pass number
     public static String date;

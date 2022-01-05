@@ -1,6 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.company.BoardingPassNumber;
+//import com.company.BoardingPassNumber;
 import org.junit.jupiter.api.*;
 
 public class BoardingPassNumberTest {
