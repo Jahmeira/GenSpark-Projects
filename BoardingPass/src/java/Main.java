@@ -1,3 +1,8 @@
+package com.company;
+
+import com.company.BoardingInfo;
+import com.company.TicketPrice;
+
 import java.io.*;
 import java.util.Scanner;
 
@@ -12,14 +17,13 @@ import java.util.Scanner;
 	Age < = 12, 50% reduction of ticket price regardless of gender
 	Age > = 60, 60% reduction of ticket price regardless of gender
 	Females, 25% discount on the ticket price
-
  */
 
 public class Main {
 
     public static void Main (String[] args) throws IOException {
-    BufferedWriter writer = new BufferedWriter(new FileWriter("BoardingInfoFile.txt", true));
-    BufferedReader reader = new BufferedReader(new FileReader("BoardingInfoFile"));
+        BufferedWriter writer = new BufferedWriter(new FileWriter("BoardingInfoFile.txt", true));
+        BufferedReader reader = new BufferedReader(new FileReader("BoardingInfoFile"));
 
         Scanner input = new Scanner(System.in);
         Passenger passenger = new Passenger(); //BOARDING PASS INFO a and has passenger info
@@ -30,7 +34,9 @@ public class Main {
         writer.write("✈ JSJ Airlines ✈\n");
         boardingInfo.textFormat(input, writer, passenger, boardingInfo);
         boardingInfo.userFillOut(input, writer, passenger);
-        ticketPrice.price(Double distance, int age, String gender);
+        Locations locations = new Locations();
+        Double distance = locations.location(origin, destination);
+        ticketPrice.price(distance, passenger.getAge(), passenger.getGender());
 
         writer.close();
         boardingInfo.displayFile(reader);
@@ -38,10 +44,8 @@ public class Main {
 
     //For storing passengers info
   /*  File boardingInfo = new File("\"C:\\genspark_projects\\BoardingPass\\BoardingInfoFile.txt\"");
-
     //File for boarding pass template // template needed
     File boardingTemplate = new File("");
-
     boardingInfo.write(age, name,)*/
 
     public static String bPN; //boarding pass number
